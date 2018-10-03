@@ -1,0 +1,72 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    supportDependencies = [
+            annotationProcessor : "com.jakewharton:butterknife-compiler:8.6.0",
+            butterknife         : "com.jakewharton:butterknife:8.6.0",
+            sdpgradle           : "com.intuit.sdp:sdp-android:1.0.4",
+            sspgradle           : "com.intuit.ssp:ssp-android:1.0.4",
+            placeholderview     : "com.mindorks:placeholderview:0.7.1",
+            glide               : "com.github.bumptech.glide:glide:3.8.0",
+            transformations     : "jp.wasabeef:glide-transformations:2.0.2",
+            glideannotation     : "com.github.bumptech.glide:compiler:3.8.0",
+            stickyheaders       : "com.brandongogetap:stickyheaders:0.5.0",
+            androidsvg          : "com.caverock:androidsvg:1.2.1",
+            eventbus            : "com.squareup:otto:1.3.8",
+            firebaseads         : "com.google.firebase:firebase-ads:10.0.1",
+            firebaseinvites     : "com.google.firebase:firebase-invites:10.0.1",
+            firebaseCore        : "com.google.firebase:firebase-core:10.0.1",
+            calligraphy         : "uk.co.chrisjenx:calligraphy:2.1.0",
+            designSupport       : "com.android.support:design:27.0.0",
+            designSupportV4     : "com.android.support:support-v4:27.0.0",
+            cardView            : "com.android.support:cardview-v7:27.0.0",
+            imagepicker         : "com.github.ParkSangGwon:TedPicker:v1.0.10",
+            wdullareTimePicker  : "com.wdullaer:materialdatetimepicker:3.3.0",
+            firebaseMessaging   : "com.google.firebase:firebase-messaging:10.0.1",
+            permissionDispatcher: "com.github.hotchemi:permissionsdispatcher:2.4.0",
+            permissionannotation: "com.github.hotchemi:permissionsdispatcher-processor:2.4.0",
+            twitter             : "com.twitter.sdk.android:twitter:3.1.1",
+            twittercore         : "com.twitter.sdk.android:twitter-core:3.1.1",
+            retrofit            : "com.squareup.retrofit2:retrofit:2.4.0",
+            retrofitJson        : "com.squareup.retrofit2:converter-gson:2.4.0",
+            retrofitinterceptor : "com.squareup.okhttp3:logging-interceptor:3.8.0",
+            location            : "com.google.android.gms:play-services-location:10.+",
+            facebook            : "com.facebook.android:facebook-android-sdk:4.14.0",
+            countryWithFlag     : "com.github.mukeshsolanki:country-picker-android:1.2.0",
+            rxjava              : "io.reactivex.rxjava2:rxjava:2.1.1",
+            multidex            : "com.android.support:multidex:1.0.1",
+            recyclerview        : "com.android.support:recyclerview-v7:27.0.0",
+            smack_java          : "org.igniterealtime.smack:smack-java7:4.2.2",
+            smack_tcp           : "org.igniterealtime.smack:smack-tcp:4.2.2",
+            smack_im            : "org.igniterealtime.smack:smack-im:4.2.2",
+            smack_extensions    : "org.igniterealtime.smack:smack-extensions:4.2.2",
+            swipemenulistview   : "com.baoyz.swipemenulistview:library:1.3.0"
+    ]
+
+}
